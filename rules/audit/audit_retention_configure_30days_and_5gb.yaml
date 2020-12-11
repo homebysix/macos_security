@@ -1,0 +1,37 @@
+id: audit_retention_configure_30days_and_5gb
+title: "Configure Audit Retention to 30 Days and Five Gigabytes"
+discussion: |
+  The audit service _MUST_ be configured to require records be kept for 30 days and five gigabytes before deletion, unless the system uses a central audit record storage facility. 
+  
+  When "expire-after" is set to "expire-after:30d AND 5G", the audit service will not delete audit logs until the log data is at least seven days old.
+check: |
+  /usr/bin/grep -c "expire-after:30d AND 5G" /etc/security/audit_control
+result:
+  integer: 1
+fix: |
+  [source,bash]
+  ----
+  /usr/bin/sed -i.bak 's/^expire-after.*/expire-after:30d AND 5G/' /etc/security/audit_control; /usr/sbin/audit -s
+  ----
+references:
+  cce:
+    - n/a
+  cci:
+    - n/a
+  800-53r4:
+    - n/a
+  800-171r2:
+    - n/a
+  srg:
+    - n/a
+  disa_stig:
+    - n/a
+macOS:
+  - "11.0"
+tags:
+  - 800-179_standalone
+  - 800-179_managed
+  - 800-179_sslf
+  - preliminary
+mobileconfig: false
+mobileconfig_info:
