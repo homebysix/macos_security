@@ -30,6 +30,10 @@ references:
 macOS:
   - "11.0"
 tags:
+  - 800-179_standalone
+  - 800-179_managed
+  - 800-179_sslf
+  - preliminary
   - STIG
 mobileconfig: false
 mobileconfig_info:

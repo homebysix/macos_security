@@ -1,0 +1,38 @@
+id: auth_ssh_smartcard_enforce
+title: "Disables the Public Key Authentication Mechanism for SSH"
+discussion: |
+  If remote login through SSH is enabled, public key authentication _MUST_ be disabled.
+
+  NOTE: /etc/ssh/sshd_config will be automatically modified to its original state following any update or major upgrade to the operating system.
+check: |
+  /usr/bin/grep -Ec '^PubkeyAuthentication no' /etc/ssh/sshd_config 
+result:
+  integer: 1
+fix: |
+  The following commands must be run to disable passcode based authentication for SSHD: 
+  [source,bash]
+  ----
+  /usr/bin/sed -i.bak 's/.*PubkeyAuthentication.*/PubkeyAuthentication no/' /etc/ssh/sshd_config; /bin/launchctl kickstart -k system/com.openssh.sshd
+  ----
+references:
+  cce:
+    - n/a
+  cci:
+    - n/a
+  800-53r4:
+    - n/a
+  srg: 
+    - n/a
+  disa_stig:
+    - n/a
+  800-171r2:
+    - n/a
+macOS:
+  - "11.0"
+tags:
+  - 800-179_standalone
+  - 800-179_managed
+  - 800-179_sslf
+  - preliminary
+mobileconfig: false
+mobileconfig_info:
