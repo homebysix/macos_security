@@ -19,6 +19,8 @@ references:
     - N/A
   srg:
     - N/A
+  800-53r5:
+    - MA-4
 macOS:
   - "11.0"
 tags:

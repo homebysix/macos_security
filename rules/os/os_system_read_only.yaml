@@ -20,6 +20,8 @@ references:
     - N/A
   disa_stig:
     - N/A
+  800-53r5:
+    - SC-34
 macOS:
   - "11.0"
 tags:

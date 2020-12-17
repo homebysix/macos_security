@@ -23,6 +23,8 @@ references:
     - SRG-OS-000400-GPOS-00179
     - SRG-OS-000401-GPOS-00180
     - SRG-OS-000402-GPOS-00181
+  800-53r5:
+    - SC-21
 macOS:
   - "11.0"
 tags:

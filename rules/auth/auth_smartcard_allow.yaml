@@ -24,6 +24,10 @@ references:
    - SRG-OS-000376-GPOS-00161
   disa_stig:
     - N/A
+  800-53r5:
+    - IA-2(1)
+    - IA-2(2)
+    - IA-2(12)
 macOS:
   - "11.0"
 tags:

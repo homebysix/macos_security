@@ -26,6 +26,9 @@ references:
    - SRG-OS-000067-GPOS-00035
   disa_stig: 
    - AOSX-15-003002
+  800-53r5:
+    - IA-2(12)
+    - IA-5(2)
 macOS:
   - "11.0"
 tags:

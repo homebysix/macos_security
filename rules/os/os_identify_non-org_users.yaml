@@ -17,6 +17,8 @@ references:
     - N/A
   srg:
     - SRG-OS-000121-GPOS-00062
+  800-53r5:
+    - IA-8
 macOS:
   - "11.0"
 tags:

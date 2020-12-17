@@ -25,6 +25,8 @@ references:
     - SRG-OS-000132-GPOS-00067
   800-171r2:
     - 3.13.3
+  800-53r5:
+    - SC-2
 macOS:
   - "11.0"
 tags:

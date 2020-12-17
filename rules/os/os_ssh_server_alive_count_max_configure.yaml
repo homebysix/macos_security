@@ -26,6 +26,8 @@ references:
     - N/A
   800-171r2:
     - 3.13.9
+  800-53r5:
+    - SC-10
 macOS:
   - "11.0"
 tags:

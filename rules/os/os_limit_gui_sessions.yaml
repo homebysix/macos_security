@@ -19,6 +19,8 @@ references:
     - N/A
   srg:
     - SRG-OS-000027-GPOS-00008
+  800-53r5:
+    - AC-10
 macOS:
   - "11.0"
 tags:

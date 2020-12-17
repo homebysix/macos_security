@@ -22,6 +22,8 @@ references:
   srg:
     - SRG-OS-000479-GPOS-00224
     - SRG-OS-000342-GPOS-00133
+  800-53r5:
+    - AU-4(1)
 macOS:
   - "11.0"
 tags:
