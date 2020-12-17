@@ -31,6 +31,8 @@ references:
 macOS:
   - "11.0"
 tags:
+  - 800-53r5_moderate
+  - 800-53r5_high
   - STIG
 mobileconfig: false
 mobileconfig_info:
