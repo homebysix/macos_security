@@ -1,0 +1,86 @@
+title: "macOS 11.0: Security Configuration - 800-53 Rev5 Low"
+description: |
+  This guide describes the actions to take when securing a macOS 11.0 system against the NIST SP 800-53 Revision 5 Low baseline.  
+profile:
+  - section: "authentication"
+    rules:
+      - auth_pam_login_smartcard_enforce
+      - auth_smartcard_allow
+      - auth_pam_sudo_smartcard_enforce
+      - auth_ssh_smartcard_enforce
+      - auth_smartcard_certificate_trust_enforce_high
+      - auth_smartcard_certificate_trust_enforce_moderate
+      - auth_smartcard_enforce
+      - auth_pam_su_smartcard_enforce
+  - section: "auditing"
+    rules:
+      - audit_flags_fm_configure
+      - audit_auditd_enabled
+      - audit_flags_ad_configure
+      - audit_flags_ex_configure
+      - audit_flags_aa_configure
+      - audit_retention_configure
+      - audit_flags_fr_configure
+      - audit_flags_lo_configure
+      - audit_flags_fw_configure
+  - section: "macos"
+    rules:
+      - os_gatekeeper_rearm
+      - os_root_disable
+      - os_guest_account_disable
+      - os_policy_banner_ssh_enforce
+      - os_anti_virus_installed
+      - os_handoff_disable
+      - os_firewall_log_enable
+      - os_tftpd_disable
+      - os_ssh_fips_140_ciphers
+      - os_authenticated_root_enable
+      - os_uucp_disable
+      - os_policy_banner_loginwindow_enforce
+      - os_filevault_autologin_disable
+      - os_airdrop_disable
+      - os_nfsd_disable
+      - os_httpd_disable
+      - os_gatekeeper_enable
+      - os_sip_enable
+      - os_removable_media_disable
+      - os_guest_access_smb_disable
+      - os_policy_banner_ssh_configure
+      - os_unlock_active_user_session_disable
+      - os_sshd_fips_140_ciphers
+      - os_sshd_fips_140_macs
+      - os_ssh_fips_140_macs
+      - os_guest_access_afp_disable
+  - section: "systempreferences"
+    rules:
+      - sysprefs_smbd_disable
+      - sysprefs_rae_disable
+      - sysprefs_media_sharing_disabled
+      - sysprefs_ssh_disable
+      - sysprefs_gatekeeper_identified_developers_allowed
+      - sysprefs_gatekeeper_override_disallow
+      - sysprefs_afp_disable
+      - sysprefs_loginwindow_prompt_username_password_enforce
+      - sysprefs_automatic_login_disable
+      - sysprefs_screen_sharing_disable
+      - sysprefs_password_hints_disable
+      - sysprefs_bluetooth_sharing_disable
+  - section: "Inherent"
+    rules:
+      - os_logical_access
+      - os_obscure_password
+      - os_required_crypto_module
+  - section: "Permanent"
+    rules:
+      - os_secure_name_resolution
+  - section: "not_applicable"
+    rules: 
+      - os_nonlocal_maintenance
+      - os_identify_non-org_users
+  - section: "Supplemental"
+    rules:
+      - supplemental_firewall_pf
+      - supplemental_filevault
+      - supplemental_password_policy
+      - supplemental_controls
+      - supplemental_smartcard
