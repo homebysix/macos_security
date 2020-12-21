@@ -9,7 +9,6 @@ check: |
 result:
   integer: 1
 fix: |
-  The following commands must be run to disable passcode based authentication for SSHD: 
   [source,bash]
   ----
   /usr/bin/sed -i.bak 's/.*PubkeyAuthentication.*/PubkeyAuthentication no/' /etc/ssh/sshd_config; /bin/launchctl kickstart -k system/com.openssh.sshd
