@@ -1,4 +1,4 @@
-id: pwpolicy_history_enforce
+id: pwpolicy_history_enforce_15
 title: "Prohibit Password Reuse for a Minimum of 15 Generations"
 discussion: |
   The macOS _MUST_ be configured to enforce a password history of at least 15 previous passwords when a password is created. 

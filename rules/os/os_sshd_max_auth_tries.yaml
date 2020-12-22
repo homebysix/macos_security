@@ -12,7 +12,7 @@ fix: |
   The following commands must be run to disable passcode based authentication for SSHD: 
   [source,bash]
   ----
-  /usr/bin/grep -q '^MaxAuthTries' /etc/ssh/sshd_config && /usr/bin/sed -i.bak  's/.^MaxAuthTries.*/MaxAuthTries 4/' /etc/ssh/sshd_config || /bin/echo 'MaxAuthTries 4' >> /etc/ssh/sshd_config; /bin/launchctl kickstart -k system/com.openssh.sshd  ----
+  /usr/bin/grep -q '^MaxAuthTries' /etc/ssh/sshd_config && /usr/bin/sed -i.bak  's/.^MaxAuthTries.*/MaxAuthTries 4/' /etc/ssh/sshd_config || /bin/echo 'MaxAuthTries 4' >> /etc/ssh/sshd_config; /bin/launchctl kickstart -k system/com.openssh.sshd
   ----
 references:
   cce:

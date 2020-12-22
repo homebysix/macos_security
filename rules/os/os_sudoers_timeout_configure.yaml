@@ -5,7 +5,7 @@ discussion: |
 
   Authentication for sudo commands is required on a per-command basis.
 check: |
-  /usr/bin/awk -F"=" '/Defaults timestamp_timeout/{print $2}' /etc/sudoers
+  /usr/bin/awk -F"=" '/timestamp_timeout/{print $2}' /etc/sudoers
 result:
   integer: 0
 fix: |
